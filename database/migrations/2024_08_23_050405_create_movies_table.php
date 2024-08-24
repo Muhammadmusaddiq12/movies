@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('movies', function (Blueprint $table) {
-            $table->id();
-            $table->string('movie_name');
-            $table->string('movie_desc');
-            $table->string('release_date');
-            $table->string('language');
-            $table->string('quality')->nullable();
-            $table->string('rating')->nullable();
-            $table->string('status');
-            $table->string('poster_image');
-            $table->timestamps();
-        });
+            Schema::create('movies', function (Blueprint $table) {
+                $table->id();
+                $table->string('movie_name');
+                $table->string('movie_desc');
+                $table->string('release_date');
+                $table->string('language');
+                $table->string('quality')->nullable();
+                $table->string('rating')->nullable();
+                $table->string('status');
+                $table->string('poster_image');
+                $table->timestamps();
+            });
     }
 
     /**

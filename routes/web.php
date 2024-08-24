@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\movie;
+use App\Models\theatre;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
@@ -60,7 +62,11 @@ Route::get('/insert/movies', function(){
 Route::get('/insert/theatre', function(){
     return view('admin.inserttheatre');
 });
-
+Route::get('/insert/shows', function(){
+    $movies = movie::all();
+    $theatres = theatre::all();
+    return view('admin.insertshow', compact('movies', 'theatre'));
+});
 
 
 Route::post('/movie', [MovieController::class, 'store']);
@@ -71,5 +77,7 @@ Route::post('/theatre', [MovieController::class, 'storetheatre']);
 Route::get('/theatres', [MovieController::class, 'theatre']);
 
 
+Route::get('/shows', [MovieController::class, 'show']);
+Route::post('/show', [MovieController::class, 'storeshows']);
 
 

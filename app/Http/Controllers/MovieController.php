@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\movie;
+use App\Models\show;
 use App\Models\theatre;
 use Illuminate\Http\Request;
 
@@ -58,5 +59,10 @@ class MovieController extends Controller
 
         // Redirect or return a response
         return redirect()->back()->with('success', 'Theater added successfully!');
+    }
+
+    public function show(){
+        $shows = show::all();
+        return view('admin.show', compact('shows'));
     }
 }
