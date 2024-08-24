@@ -57,10 +57,18 @@ Route::middleware([
 Route::get('/insert/movies', function(){
     return view('admin.insertmovies');
 });
+Route::get('/insert/theatre', function(){
+    return view('admin.inserttheatre');
+});
 
 
 
 Route::post('/movie', [MovieController::class, 'store']);
+Route::get('/movies', [MovieController::class, 'movie']);
+
+
+Route::post('/theatre', [MovieController::class, 'storetheatre']);
+Route::get('/theatres', [MovieController::class, 'theatre']);
 
 
 

@@ -45,19 +45,19 @@
               <span class="hide-menu">UI COMPONENTS</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/insert/movies" aria-expanded="false">
+              <a class="sidebar-link" href="/movies" aria-expanded="false">
                 <span>
                   <i class="ti ti-movie"></i>
                 </span>
-                <span class="hide-menu">Insert Movies</span>
+                <span class="hide-menu">Movies</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
+              <a class="sidebar-link" href="/theatres" aria-expanded="false">
                 <span>
                   <i class="ti ti-alert-circle"></i>
                 </span>
-                <span class="hide-menu">Threater show</span>
+                <span class="hide-menu">Theaters</span>
               </a>
             </li>
             <li class="sidebar-item">

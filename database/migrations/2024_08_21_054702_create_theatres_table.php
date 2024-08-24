@@ -15,9 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('theatre_name');
             $table->integer('seating_capacity');
-            $table->integer('available_capacity');
             $table->integer('ticket_rate');
-            $table->integer('show_class');
+            $table->string('show_class');
             $table->timestamps();
         });
     }

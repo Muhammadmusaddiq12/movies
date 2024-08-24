@@ -1,7 +1,11 @@
 @extends('admin.main')
 
 @section('main-section')
-
+@if (session('success'))
+   <div class="alert alert-primary">
+    {{session('success')}}
+   </div>
+@endif
 <div class="container">
     <div>
         <form action="/movie" method="POST" enctype="multipart/form-data">
